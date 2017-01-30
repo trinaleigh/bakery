@@ -13,17 +13,47 @@ const colorwheel =
 	"#FFCCBC",
 	"#FFF9C4"];
 
-for (let i = 1; i < 52; i++){
+function images() {
+	for (let i = 1; i <= 52; i++){
 
-	newImg = document.createElement("img");
-	newImg.style.height = `300px`;
-	newImg.style.border = `10px solid ${colorwheel[i%4]}`;
-	newImg.id = `w${i}`;
-	if (i<= weekNum){
-		newImg.src = `images/w${i}.jpg`;
-	} else {
-		newImg.src = `images/blank.jpeg`;
+		newDiv = document.createElement("div");
+		newDiv.classList.add("d-flex", "flex-column", "captioned");
+
+		newImg = document.createElement("img");
+		newImg.style.height = `300px`;
+		newImg.style.border = `10px solid ${colorwheel[i%4]}`;
+		newImg.id = `w${i}`;
+
+		if (i<= weekNum){
+			newImg.src = `images/w${i}.jpg`;
+		} else {
+			newImg.src = `images/blank.jpeg`;
+		}
+
+		newCaption = document.createElement("span");
+		newCaption.innerHTML = `week ${i}`;
+		newCaption.style.backgroundColor = `${colorwheel[i%4]}`;
+		
+		newDiv.appendChild(newImg);
+		newDiv.appendChild(newCaption);
+		container.appendChild(newDiv);
 	}
 
-	container.appendChild(newImg);
 }
+
+function captions(){
+	// fix caption width after page load
+	captions = document.querySelectorAll("span");
+	captions.forEach(function(caption){
+		w = caption.parentElement.offsetWidth;
+		caption.style.width = w;	
+	})
+}
+
+
+
+images()
+
+$(document).ready(function () {
+    captions();
+});
