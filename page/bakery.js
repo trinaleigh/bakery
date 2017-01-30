@@ -11,8 +11,7 @@ const colorwheel =
 	["#FFECB3",
 	"#FFE0B2",
 	"#FFCCBC",
-	"#FFF9C4"
-	];
+	"#FFF9C4"];
 
 for (let i = 1; i < 52; i++){
 
@@ -25,7 +24,6 @@ for (let i = 1; i < 52; i++){
 	} else {
 		newImg.src = `images/blank.jpeg`;
 	}
-	
+
 	container.appendChild(newImg);
 }
-
