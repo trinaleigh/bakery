@@ -14,14 +14,18 @@ const colorwheel =
 	"#FFF9C4"];
 
 function images() {
+
+	imgDim = 225	
+	borderDim= 10
+
 	for (let i = 1; i <= 52; i++){
 
 		newDiv = document.createElement("div");
 		newDiv.classList.add("d-flex", "flex-column", "captioned");
 
 		newImg = document.createElement("img");
-		newImg.style.height = `300px`;
-		newImg.style.border = `10px solid ${colorwheel[i%4]}`;
+		newImg.style.width = `${imgDim}px`;
+		newImg.style.border = `${borderDim}px solid ${colorwheel[i%4]}`;
 		newImg.id = `w${i}`;
 
 		if (i<= weekNum){
@@ -33,6 +37,8 @@ function images() {
 		newCaption = document.createElement("span");
 		newCaption.innerHTML = `week ${i}`;
 		newCaption.style.backgroundColor = `${colorwheel[i%4]}`;
+		newCaption.style.width = `${imgDim}px`;
+		console.log(newCaption.style.width);
 		
 		newDiv.appendChild(newImg);
 		newDiv.appendChild(newCaption);
@@ -41,19 +47,4 @@ function images() {
 
 }
 
-function captions(){
-	// fix caption width after page load
-	captions = document.querySelectorAll("span");
-	captions.forEach(function(caption){
-		w = caption.parentElement.offsetWidth;
-		caption.style.width = w;	
-	})
-}
-
-
-
 images()
-
-$(document).ready(function () {
-    captions();
-});
