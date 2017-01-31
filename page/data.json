@@ -1,0 +1,16 @@
+{ "weeks":
+	[{"descriptor" : "chocolate chocolate",
+		"category" : "cupcakes" },
+
+		{"descriptor" : "lemon poppyseed",
+		"category" : "muffins" },
+
+		{"descriptor" : "cherry walnut chocolate chip",
+		"category" : "cookies" },
+
+		{"descriptor" : "blueberry",
+		"category" : "muffins" },
+
+		{"descriptor" : "peanut butter",
+		"category" : "cookies" }]
+}

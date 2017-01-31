@@ -13,6 +13,8 @@ const colorwheel =
 	"#FFCCBC",
 	"#FFF9C4"];
 
+var recipes = [];
+
 function images() {
 
 	imgDim = 225	
@@ -22,11 +24,12 @@ function images() {
 
 		newDiv = document.createElement("div");
 		newDiv.classList.add("d-flex", "flex-column", "captioned");
+		newDiv.id = `${i}`;
 
 		newImg = document.createElement("img");
 		newImg.style.width = `${imgDim}px`;
 		newImg.style.border = `${borderDim}px solid ${colorwheel[i%4]}`;
-		newImg.id = `w${i}`;
+		
 
 		if (i<= weekNum){
 			newImg.src = `images/w${i}.jpg`;
@@ -38,13 +41,33 @@ function images() {
 		newCaption.innerHTML = `week ${i}`;
 		newCaption.style.backgroundColor = `${colorwheel[i%4]}`;
 		newCaption.style.width = `${imgDim}px`;
-		console.log(newCaption.style.width);
 		
 		newDiv.appendChild(newImg);
 		newDiv.appendChild(newCaption);
 		container.appendChild(newDiv);
 	}
 
+	desserts = document.querySelectorAll(".captioned");
+	desserts.forEach(function(dessert) {
+		dessert.addEventListener("mouseover",showDetail);
+		})
+
+	function showDetail(){
+		console.log(recipes.weeks[this.id-1]);
+	}
+
 }
 
-images()
+
+// get the JSON file corresponding to the song selected
+function getData(){
+	return $.ajax({
+	    url: `data.json`,
+	    success: function (data) {
+	        recipes = data;
+	    }
+	});
+}
+getData().then(images)
+
+
