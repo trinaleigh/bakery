@@ -22,6 +22,10 @@ function images() {
 	imgDim = 225	
 	borderDim= 10
 
+	// create colored div for each week
+	// add images (up to the current week) or blank image 
+	// add captions
+	
 	for (let i = 1; i <= 52; i++){
 
 		newDiv = document.createElement("div");
@@ -77,8 +81,7 @@ function images() {
 
 }
 
-
-// get the JSON file corresponding to the song selected
+// get JSON file with descriptors
 function getData(){
 	return $.ajax({
 	    url: `data.json`,
@@ -87,6 +90,7 @@ function getData(){
 	    }
 	});
 }
+
 getData().then(images)
 
 

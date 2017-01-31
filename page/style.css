@@ -1,6 +1,11 @@
+* {
+	--bg: #FFF3E0;
+ 	--primary: #E57373;
+}
+
 body {
-	background: #FFF3E0;
-	color: #E57373;
+	background: var(--bg);
+	color: var(--primary);
 }
 
 span {
@@ -8,6 +13,20 @@ span {
 	text-align: center;
 	padding-top: 10px;
 	padding-bottom: 15px;
+}
+
+#navbar {
+	min-height: 70px;
+	align-items: center;
+}
+
+.nav {
+	background: var(--primary);
+	color: var(--bg);
+	float: left;
+	width: 75px;
+	border-radius: 5px;
+	margin: 10 10 10 10;
 }
 
 .captioned {
@@ -28,5 +47,6 @@ span {
     font-size: 24px;		
     background: white;	
     pointer-events: none;
-    opacity: 0;		
+    opacity: 0;
+    transition: 0.5s;		
 }
