@@ -9,6 +9,18 @@ app.get('/', function(request, response) {
   response.render('page/index');
 });
 
+app.get('/display', function(request, response) {
+  response.render('page/display/index');
+});
+
+app.get('/stats', function(request, response) {
+  response.render('page/stats/index');
+});
+
+app.get('/ideas', function(request, response) {
+  response.render('page/ideas/index');
+});
+
 app.listen(app.get('port'), function() {
   console.log('Node app is running on port', app.get('port'));
 });

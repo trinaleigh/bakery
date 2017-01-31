@@ -38,9 +38,9 @@ function images() {
 		
 
 		if (i<= weekNum){
-			newImg.src = `images/w${i}.jpg`;
+			newImg.src = `../images/w${i}.jpg`;
 		} else {
-			newImg.src = `images/blank.jpeg`;
+			newImg.src = `../images/blank.jpeg`;
 		}
 
 		newCaption = document.createElement("span");
@@ -84,7 +84,7 @@ function images() {
 // get JSON file with descriptors
 function getData(){
 	return $.ajax({
-	    url: `data.json`,
+	    url: `../data.json`,
 	    success: function (data) {
 	        recipes = data;
 	    }
