@@ -15,6 +15,8 @@ const colorwheel =
 
 var recipes = [];
 
+const overlay = document.querySelector(".overlay");
+
 function images() {
 
 	imgDim = 225	
@@ -50,10 +52,27 @@ function images() {
 	desserts = document.querySelectorAll(".captioned");
 	desserts.forEach(function(dessert) {
 		dessert.addEventListener("mouseover",showDetail);
+		dessert.addEventListener("click",showDetail);
 		})
 
 	function showDetail(){
-		console.log(recipes.weeks[this.id-1]);
+		try {
+			overlay.innerHTML = `${recipes.weeks[this.id-1].descriptor} ${recipes.weeks[this.id-1].category}`
+		} catch (error) {
+			overlay.innerHTML = "coming soon!"
+		}
+		const item = this.getBoundingClientRect();
+		const body = document.querySelector("body").getBoundingClientRect();
+		const coords = {
+			w: item.width,
+			h: item.height,
+			t: item.top - body.top, // + window.scrollY,
+			l: item.left + window.scrollX
+		};
+      overlay.style.width = `${coords.w}px`;
+      overlay.style.height = `${coords.h}px`;
+      overlay.style.transform = `translate(${coords.l}px,${coords.t}px)`;
+      overlay.style.opacity = `0.8`;
 	}
 
 }
