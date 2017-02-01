@@ -55,9 +55,11 @@ span {
 
 .chart {
 	margin: 20 20 20 20;
+	float: left;
 }
 
 .chartLabel {
 	fill: var(--primary);
 	font-size: 18px;
+	max-width: 40px;
 }

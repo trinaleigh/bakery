@@ -30,30 +30,83 @@ var svg = d3.select("#pie").append("svg")
   	.append("g")
     .attr("transform", "translate(" + w/2 + "," + h/2 + ")");
 
+// pie chart for categories
 d3.json("../data.json", function(data) {
 
-		// roll up daily data into individual locations and count # visits
-	var countType = d3.nest()
-  		.key(function(d) { return d.category; })
-  		.rollup(function(v) { return v.length; })
-  		.entries(data.weeks);
+  var countType = d3.nest()
+    		.key(function(d) { return d.category; })
+    		.rollup(function(v) { return v.length; })
+    		.entries(data.weeks);
 
-var slice = svg.selectAll("slice")
-    .data(pie(countType))
-    .enter()
-	.append("path")
-    .attr("d", arc)
-    .style("fill", function (d) { return color(d.data.key); })
- 		
-var category = svg.selectAll("label")
-	 	.data(pie(countType))
-	    .enter()
-	    .append("text")
-	    .attr("class","chartLabel")
-		.attr("transform", function(d) { return "translate(" + label.centroid(d) + ")"; })
-		.attr("dy", ".35em")
-		.attr("text-anchor","middle")
-		.text(function(d) { return d.data.key; });
+  var slice = svg.selectAll("slice")
+      .data(pie(countType))
+      .enter()
+      .append("g");
 
+  slice.append("path")
+      .attr("d", arc)
+      .style("fill", function (d) { return color(d.data.key); });
+
+  slice.append("text")
+      .attr("dy", ".5em")
+      .attr("class","chartLabel")
+      .attr("transform", function(d) { return "translate(" + label.centroid(d) + ")"; })
+      .attr("text-anchor","middle")
+      .text(function(d) { return d.data.key; });
+   	
+});
+
+
+// bubble chart for descriptors
+
+var bubble = d3.pack()
+    .size([r*2, r*2])
+    .padding(1.5);
+
+var nextsvg = d3.select("#bubble").append("svg")
+    .attr("width", w)
+    .attr("height", h)
+    .append("g")
+
+d3.json("../data.json", function(data) {
+
+  var countFlavor = d3.nest()
+        .key(function(d) { return d.descriptor; })
+        .rollup(function(v) { return v.length; })
+        .entries(data.weeks);
+
+  // reformat to JSON parent/child list
+  var flavorList = []
+  countFlavor.forEach(flavor => {
+    item = {"name": flavor.key, 
+    "size": String(flavor.value)};
+    flavorList.push(item);
+  });
+
+  var flavorJSON = {"name": "flavors",
+    "children" : flavorList};
   
+  // run through d3 hierarcy
+  var root = d3.hierarchy(flavorJSON)
+    .sum(function(d) { return d.size; })
+    .sort(null);
+
+  bubble(root);
+
+  var node = nextsvg.selectAll("node")
+    .data(root.leaves())
+    .enter()
+    .append("g")
+    .attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; })
+
+  node.append("circle")
+      .attr("r", function(d) { return d.r; })
+      .style("fill", function (d) {return color(d.data.name)})
+
+  node.append("text")
+      .attr("dy", ".5em")
+      .style("text-anchor", "middle")
+      .attr("class","chartLabel")
+      .text(function(d) { return d.data.name; });
+
 });
