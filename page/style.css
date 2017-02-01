@@ -61,5 +61,42 @@ span {
 .chartLabel {
 	fill: var(--primary);
 	font-size: 18px;
-	max-width: 40px;
+}
+
+.card {
+	text-align: center;
+}
+
+#spinners {
+	margin: 80 20 80 20;
+}
+
+.unfocus {
+	font-size: 24px;
+}
+.focus {
+	font-size: 36px;
+}
+
+.controls {
+	text-align: center;
+}
+
+button {
+	font-size: 24px;
+	padding: 15px 15px;
+	color: var(--bg);
+	border: none;
+	background-color: var(--primary);
+	min-width: 100px;
+	border-radius: 5px;
+	text-align: center;
+}
+
+button:focus {
+  outline: none;
+}
+
+button:disabled {
+	background-color: var(--bg);
 }
