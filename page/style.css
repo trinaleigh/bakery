@@ -52,3 +52,12 @@ span {
     opacity: 0;
     transition: 0.5s;		
 }
+
+.chart {
+	margin: 20 20 20 20;
+}
+
+.chartLabel {
+	fill: var(--primary);
+	font-size: 18px;
+}
