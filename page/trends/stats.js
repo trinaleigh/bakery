@@ -1,4 +1,4 @@
-const firstChart = document.getElementById("pie")
+const firstChart = document.getElementById("bubble")
 
 // import the navbar
 const navdoc = document.getElementById("nav").import;
