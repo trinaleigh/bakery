@@ -13,8 +13,8 @@ app.get('/display', function(request, response) {
   response.render('page/display/index');
 });
 
-app.get('/stats', function(request, response) {
-  response.render('page/stats/index');
+app.get('/trends', function(request, response) {
+  response.render('page/trends/index');
 });
 
 app.get('/ideas', function(request, response) {

@@ -23,7 +23,7 @@ span {
 	background: var(--primary);
 	color: var(--bg);
 	float: left;
-	width: 75px;
+	width: 125px;
 	border-radius: 5px;
 	margin: 10 10 10 10;
 	padding-top: 10px;
@@ -84,11 +84,12 @@ span {
 
 button {
 	font-size: 24px;
-	padding: 15px 15px;
+	padding-top: 10px;
+	padding-bottom: 10px;
 	color: var(--bg);
 	border: none;
 	background-color: var(--primary);
-	min-width: 100px;
+	min-width: 150px;
 	border-radius: 5px;
 	text-align: center;
 }
