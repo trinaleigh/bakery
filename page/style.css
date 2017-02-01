@@ -16,8 +16,7 @@ span {
 }
 
 #navbar {
-	min-height: 70px;
-	align-items: center;
+	min-height: 65px;
 }
 
 .nav {
@@ -27,6 +26,9 @@ span {
 	width: 75px;
 	border-radius: 5px;
 	margin: 10 10 10 10;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	align-self: center;
 }
 
 .captioned {

@@ -1,6 +1,9 @@
-// js goes here!
-
 const container = document.getElementById("display")
+
+// import the navbar
+const navdoc = document.getElementById("nav").import;
+const navbar = navdoc.getElementById("navbar");
+document.body.insertBefore(navbar,container);
 
 const start = new Date(2017,0,1).getTime();
 const current = new Date().getTime();
