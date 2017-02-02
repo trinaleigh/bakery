@@ -103,10 +103,17 @@ d3.json("../data.json", function(data) {
       .attr("r", function(d) { return d.r; })
       .style("fill", function (d) {return color(d.data.name)})
 
-  node.append("text")
-      .attr("dy", ".5em")
+  text = node.append("text")
+      .attr("y", function(d){return `${d.data.name.split(' ').length/-2}em`})
       .style("text-anchor", "middle")
       .attr("class","chartLabel")
-      .text(function(d) { return d.data.name; });
+
+    for (i = 0; i <4 ; i++){
+      text.append("tspan")    
+          .text(function(d) { return d.data.name.split(' ')[i]; })
+          .attr("dy", `1em`)
+          .attr("x", `0`)
+    }
+
 
 });
