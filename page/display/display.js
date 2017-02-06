@@ -29,32 +29,62 @@ function images() {
 	// add images (up to the current week) or blank image 
 	// add captions
 	
-	for (let i = 1; i <= 52; i++){
+	var i = 0 
+	recipes.weeks.forEach(
+		function(recipe){
+			newDiv = document.createElement("div");
+			newDiv.classList.add("d-flex", "flex-column", "captioned");
+			newDiv.id = `${i}`;
 
-		newDiv = document.createElement("div");
-		newDiv.classList.add("d-flex", "flex-column", "captioned");
-		newDiv.id = `${i}`;
+			newImg = document.createElement("img");
+			newImg.style.width = `${imgDim}px`;
+			newImg.style.border = `${borderDim}px solid ${colorwheel[i%4]}`;
+			try { 
+				newImg.src = `../images/${recipe.image}`; 
+			} catch (error) {
+				newImg.src = `../images/blank.jpeg`
+			}
+			
 
-		newImg = document.createElement("img");
-		newImg.style.width = `${imgDim}px`;
-		newImg.style.border = `${borderDim}px solid ${colorwheel[i%4]}`;
+			newCaption = document.createElement("span");
+			newCaption.innerHTML = `${recipe.date}`;
+			newCaption.style.backgroundColor = `${colorwheel[i%4]}`;
+			newCaption.style.width = `${imgDim}px`;
+			
+			newDiv.appendChild(newImg);
+			newDiv.appendChild(newCaption);
+			container.appendChild(newDiv);
+
+			i++
+			
+			})
+
+	// for (let i = 1; i <= 52; i++){
+
+	// 	newDiv = document.createElement("div");
+	// 	newDiv.classList.add("d-flex", "flex-column", "captioned");
+	// 	newDiv.id = `${i}`;
+
+	// 	newImg = document.createElement("img");
+	// 	newImg.style.width = `${imgDim}px`;
+	// 	newImg.style.border = `${borderDim}px solid ${colorwheel[i%4]}`;
 		
 
-		if (i<= weekNum){
-			newImg.src = `../images/w${i}.jpg`;
-		} else {
-			newImg.src = `../images/blank.jpeg`;
-		}
+	// 	if (i<= weekNum){
+	// 		newImg.src = `../images/w${i}.jpg`;
+	// 	} else {
+	// 		newImg.src = `../images/blank.jpeg`;
+	// 	}
 
-		newCaption = document.createElement("span");
-		newCaption.innerHTML = `week ${i}`;
-		newCaption.style.backgroundColor = `${colorwheel[i%4]}`;
-		newCaption.style.width = `${imgDim}px`;
+	// 	newCaption = document.createElement("span");
+	// 	newCaption.innerHTML = `week ${i}`;
+	// 	newCaption.style.backgroundColor = `${colorwheel[i%4]}`;
+	// 	newCaption.style.width = `${imgDim}px`;
 		
-		newDiv.appendChild(newImg);
-		newDiv.appendChild(newCaption);
-		container.appendChild(newDiv);
-	}
+	// 	newDiv.appendChild(newImg);
+	// 	newDiv.appendChild(newCaption);
+	// 	container.appendChild(newDiv);
+	// }
 
 	desserts = document.querySelectorAll(".captioned");
 	desserts.forEach(function(dessert) {
@@ -64,7 +94,7 @@ function images() {
 
 	function showDetail(){
 		try {
-			overlay.innerHTML = `${recipes.weeks[this.id-1].descriptor} ${recipes.weeks[this.id-1].category}`
+			overlay.innerHTML = `${recipes.weeks[this.id].descriptor} ${recipes.weeks[this.id].category}`
 		} catch (error) {
 			overlay.innerHTML = "coming soon!"
 		}

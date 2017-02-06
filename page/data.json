@@ -1,16 +1,31 @@
 { "weeks":
-	[{"descriptor" : "chocolate chocolate",
-		"category" : "cupcakes" },
+	[{"descriptor" : "double chocolate",
+		"category" : "cupcakes",
+		"image" : "w1.jpg",
+		"date" : "01/01/2017" },
 
 		{"descriptor" : "lemon poppyseed",
-		"category" : "muffins" },
+		"category" : "muffins",
+		"image" : "w2.jpg",
+		"date" : "01/07/2017" },
 
 		{"descriptor" : "cherry walnut chocolate chip",
-		"category" : "cookies" },
+		"category" : "cookies",
+		"image" : "w3.jpg",
+		"date" : "01/16/2017" },
 
 		{"descriptor" : "blueberry",
-		"category" : "muffins" },
+		"category" : "muffins",
+		"image" : "w4.jpg",
+		"date" : "01/22/2017" },
 
 		{"descriptor" : "peanut butter",
-		"category" : "cookies" }]
+		"category" : "cookies",
+		"image" : "w5.jpg",
+		"date" : "01/29/2017" },
+
+		{"descriptor" : "double chocolate",
+		"category" : "cookies",
+		"image" : "w6.jpg",
+		"date" : "02/05/2017" }]
 }
