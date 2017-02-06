@@ -25,8 +25,7 @@ function images() {
 	imgDim = 225	
 	borderDim= 10
 
-	// create colored div for each week
-	// add images (up to the current week) or blank image 
+	// create colored div for each item
 	// add captions
 	
 	var i = 0 
@@ -56,35 +55,8 @@ function images() {
 			container.appendChild(newDiv);
 
 			i++
-			
+
 			})
-
-	// for (let i = 1; i <= 52; i++){
-
-	// 	newDiv = document.createElement("div");
-	// 	newDiv.classList.add("d-flex", "flex-column", "captioned");
-	// 	newDiv.id = `${i}`;
-
-	// 	newImg = document.createElement("img");
-	// 	newImg.style.width = `${imgDim}px`;
-	// 	newImg.style.border = `${borderDim}px solid ${colorwheel[i%4]}`;
-		
-
-	// 	if (i<= weekNum){
-	// 		newImg.src = `../images/w${i}.jpg`;
-	// 	} else {
-	// 		newImg.src = `../images/blank.jpeg`;
-	// 	}
-
-	// 	newCaption = document.createElement("span");
-	// 	newCaption.innerHTML = `week ${i}`;
-	// 	newCaption.style.backgroundColor = `${colorwheel[i%4]}`;
-	// 	newCaption.style.width = `${imgDim}px`;
-		
-	// 	newDiv.appendChild(newImg);
-	// 	newDiv.appendChild(newCaption);
-	// 	container.appendChild(newDiv);
-	// }
 
 	desserts = document.querySelectorAll(".captioned");
 	desserts.forEach(function(dessert) {
