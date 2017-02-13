@@ -27,5 +27,10 @@
 		{"descriptor" : "double chocolate",
 		"category" : "cookies",
 		"image" : "w6.jpg",
-		"date" : "02/05/2017" }]
+		"date" : "02/05/2017" },
+
+		{"descriptor" : "fudge",
+		"category" : "brownies",
+		"image" : "w7.jpg",
+		"date" : "02/12/2017" }]
 }
