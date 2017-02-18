@@ -6,6 +6,7 @@
 body {
 	background: var(--bg);
 	color: var(--primary);
+	padding: 0 10px 0 10px;
 }
 
 span {

@@ -32,5 +32,10 @@
 		{"descriptor" : "fudge",
 		"category" : "brownies",
 		"image" : "w7.jpg",
-		"date" : "02/12/2017" }]
+		"date" : "02/12/2017" },
+
+		{"descriptor" : "chocolate chip",
+		"category" : "cookies",
+		"image" : "w8.jpg",
+		"date" : "02/17/2017" }]
 }
