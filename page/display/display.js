@@ -76,7 +76,7 @@ function images() {
 			w: item.width,
 			h: item.height,
 			t: item.top - body.top, // + window.scrollY,
-			l: item.left + window.scrollX
+			l: item.left + window.scrollX - borderDim
 		};
       overlay.style.width = `${coords.w}px`;
       overlay.style.height = `${coords.h}px`;
