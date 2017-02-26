@@ -37,5 +37,10 @@
 		{"descriptor" : "chocolate chip",
 		"category" : "cookies",
 		"image" : "w8.jpg",
-		"date" : "02/17/2017" }]
+		"date" : "02/17/2017" },
+
+		{"descriptor" : "oatmeal raisin",
+		"category" : "muffins",
+		"image" : "w9.jpg",
+		"date" : "02/26/2017" }]
 }
