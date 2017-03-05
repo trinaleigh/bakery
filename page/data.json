@@ -42,5 +42,10 @@
 		{"descriptor" : "oatmeal raisin",
 		"category" : "muffins",
 		"image" : "w9.jpg",
-		"date" : "02/26/2017" }]
+		"date" : "02/26/2017" },
+
+		{"descriptor" : "oatmeal chocolate",
+		"category" : "bars",
+		"image" : "w10.jpg",
+		"date" : "03/05/2017" }]
 }

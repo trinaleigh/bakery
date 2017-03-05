@@ -17,7 +17,7 @@ var pie = d3.pie()
     .sort(function(d) { return d.value; });
 
 var arc = d3.arc()
-    .outerRadius(r)
+    .outerRadius(r-10)
     .innerRadius(0);
 
 var label = d3.arc()
@@ -45,7 +45,9 @@ d3.json("../data.json", function(data) {
 
   slice.append("path")
       .attr("d", arc)
-      .style("fill", function (d) { return color(d.data.key); });
+      .style("fill", function (d) { return color(d.data.key); })
+      .style("stroke", "#E57373")
+      .style("stroke-width","5");
 
   slice.append("text")
       .attr("dy", ".5em")
@@ -102,6 +104,8 @@ d3.json("../data.json", function(data) {
   node.append("circle")
       .attr("r", function(d) { return d.r; })
       .style("fill", function (d) {return color(d.data.name)})
+      .style("stroke", "#E57373")
+      .style("stroke-width","5");
 
   text = node.append("text")
       .attr("y", function(d){return `${d.data.name.split(' ').length/-2}em`})
