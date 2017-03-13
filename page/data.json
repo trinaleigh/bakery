@@ -2,50 +2,55 @@
 	[{"descriptor" : "double chocolate",
 		"category" : "cupcakes",
 		"image" : "w1.jpg",
-		"date" : "01/01/2017" },
+		"date" : "jan 1" },
 
 		{"descriptor" : "lemon poppyseed",
 		"category" : "muffins",
 		"image" : "w2.jpg",
-		"date" : "01/07/2017" },
+		"date" : "jan 7" },
 
 		{"descriptor" : "cherry walnut chocolate chip",
 		"category" : "cookies",
 		"image" : "w3.jpg",
-		"date" : "01/16/2017" },
+		"date" : "jan 16" },
 
 		{"descriptor" : "blueberry",
 		"category" : "muffins",
 		"image" : "w4.jpg",
-		"date" : "01/22/2017" },
+		"date" : "jan 22" },
 
 		{"descriptor" : "peanut butter",
 		"category" : "cookies",
 		"image" : "w5.jpg",
-		"date" : "01/29/2017" },
+		"date" : "jan 29" },
 
 		{"descriptor" : "double chocolate",
 		"category" : "cookies",
 		"image" : "w6.jpg",
-		"date" : "02/05/2017" },
+		"date" : "feb 2" },
 
 		{"descriptor" : "fudge",
 		"category" : "brownies",
 		"image" : "w7.jpg",
-		"date" : "02/12/2017" },
+		"date" : "feb 12" },
 
 		{"descriptor" : "chocolate chip",
 		"category" : "cookies",
 		"image" : "w8.jpg",
-		"date" : "02/17/2017" },
+		"date" : "feb 17" },
 
 		{"descriptor" : "oatmeal raisin",
 		"category" : "muffins",
 		"image" : "w9.jpg",
-		"date" : "02/26/2017" },
+		"date" : "feb 26" },
 
 		{"descriptor" : "oatmeal chocolate",
 		"category" : "bars",
 		"image" : "w10.jpg",
-		"date" : "03/05/2017" }]
+		"date" : "mar 5" },
+
+		{"descriptor" : "pecan",
+		"category" : "pie",
+		"image" : "w11.jpg",
+		"date" : "mar 10" }]
 }
