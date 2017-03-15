@@ -52,5 +52,10 @@
 		{"descriptor" : "pecan",
 		"category" : "pie",
 		"image" : "w11.jpg",
-		"date" : "mar 10" }]
+		"date" : "mar 10" },
+
+		{"descriptor" : "funfetti",
+		"category" : "cookies",
+		"image" : "w12.jpg",
+		"date" : "mar 14" }]
 }
