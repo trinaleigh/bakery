@@ -18,7 +18,7 @@ var pie = d3.pie()
 
 var arc = d3.arc()
     .outerRadius(r-10)
-    .innerRadius(0);
+    .innerRadius(r/4);
 
 var label = d3.arc()
     .outerRadius(r - 50)

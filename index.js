@@ -4,9 +4,10 @@ var app = express();
 app.set('port', (process.env.PORT || 5000));
 
 app.use(express.static(__dirname + '/page'));
+app.use(express.static(__dirname + '/page/display'));
 
 app.get('/', function(request, response) {
-  response.render('page/index');
+  response.render('page/display/index');
 });
 
 app.get('/display', function(request, response) {
