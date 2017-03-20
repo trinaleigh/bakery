@@ -57,5 +57,10 @@
 		{"descriptor" : "funfetti",
 		"category" : "cookies",
 		"image" : "w12.jpg",
-		"date" : "mar 14" }]
+		"date" : "mar 14" },
+
+		{"descriptor" : "jam",
+		"category" : "cookies",
+		"image" : "w13.jpg",
+		"date" : "mar 19" }]
 }
