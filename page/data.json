@@ -1,5 +1,5 @@
 { "weeks":
-	[{"descriptor" : "double chocolate",
+	[{"descriptor" : "chocolate",
 		"category" : "cupcakes",
 		"image" : "w1.jpg",
 		"date" : "jan 1" },
@@ -24,12 +24,12 @@
 		"image" : "w5.jpg",
 		"date" : "jan 29" },
 
-		{"descriptor" : "double chocolate",
+		{"descriptor" : "chocolate",
 		"category" : "cookies",
 		"image" : "w6.jpg",
 		"date" : "feb 2" },
 
-		{"descriptor" : "fudge",
+		{"descriptor" : "chocolate",
 		"category" : "brownies",
 		"image" : "w7.jpg",
 		"date" : "feb 12" },
