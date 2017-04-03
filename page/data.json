@@ -62,5 +62,10 @@
 		{"descriptor" : "jam",
 		"category" : "cookies",
 		"image" : "w13.jpg",
-		"date" : "mar 19" }]
+		"date" : "mar 19" },
+
+		{"descriptor" : "funfetti",
+		"category" : "cupcakes",
+		"image" : "w14.jpg",
+		"date" : "apr 2" }]
 }
