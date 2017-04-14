@@ -37,6 +37,7 @@ function images() {
 
 			newImg = document.createElement("img");
 			newImg.style.width = `${imgDim}px`;
+			newImg.style.height = `${imgDim*4/3}px`;
 			newImg.style.border = `${borderDim}px solid ${colorwheel[i%4]}`;
 			try { 
 				newImg.src = `../images/${recipe.image}`; 

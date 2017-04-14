@@ -67,5 +67,10 @@
 		{"descriptor" : "funfetti",
 		"category" : "cupcakes",
 		"image" : "w14.jpg",
-		"date" : "apr 2" }]
+		"date" : "apr 2" },
+
+		{"descriptor" : "reese's pieces",
+		"category" : "cookies",
+		"image" : "w15.jpg",
+		"date" : "apr 10" }]
 }
